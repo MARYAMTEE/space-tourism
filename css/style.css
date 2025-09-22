@@ -11,6 +11,8 @@
     --dark: hsl(230 35% 7%);
     --light: hsl(231 77% 90%);
     --white: hsl(0 0% 100%);
+    --mobile-nav: hsl(0 0 100% 4%);
+;
 
     /* font-sizes */
     --fs-900: 9.375rem;
@@ -49,7 +51,12 @@ button {
   }
 }
 
+.flex{
+    display: flex;
+}
+
 body{
+    position: relative;
     font-family: var(--barlow);
     font-size: var(--fs-200);
     font-weight: 400;
@@ -61,4 +68,84 @@ body{
     background-position: center;
     background-size: cover;
     text-align: center;
+}
+
+.nav__menu{
+    position: fixed;
+    top: 0;
+    right: -16rem;
+    width: 16rem;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--mobile-nav);
+    backdrop-filter: blur(1.25rem);
+    -webkit-backdrop-filter: blur(1.5rem);
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 1;
+    transition: right 0.5s ease-in-out;
+}
+
+.nav__menu.active{
+    right: 0;
+}
+
+.nav__list{
+    list-style-type: none;
+    text-align: start;
+}
+
+.nav__list a > span {
+    font-weight: 700;
+    margin-inline: 0.5rem;
+}
+
+.nav__item{
+    padding-block: 1rem;
+    margin-block-end: 1rem;
+    position: relative;
+}
+
+.nav__item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+}
+
+.nav__item.active::after,
+.nav__item.active:hover::after{
+    width: 100%;
+}
+
+.nav__item.active:hover::after{
+    background-color: var(--light);
+}
+
+.nav__link{
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    font-family: var(--condensed);
+}
+
+/* Menu icons */
+.hamburger{
+    background-color: transparent;
+    color: var(--light);
+    border: none;
+    outline: none;
+}
+
+.hamburger--i{
+    font-size: var(--fs-500);
+}
+
+.close__btn {
+    justify-content: flex-end;
 }
