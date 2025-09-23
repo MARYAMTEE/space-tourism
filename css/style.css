@@ -169,7 +169,7 @@ body{
 }
 .space__heading {
     display: block;
-    font-size: var(--fs-00);
+    font-size: clamp(1rem, 2vw, 1.75rem);
     font-weight: 500;
     font-family: var(--condensed);
     letter-spacing: 4.5px;
@@ -230,7 +230,6 @@ body{
 
 .space__main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
     gap: 4rem;
 }
 
@@ -253,7 +252,7 @@ body{
     .nav__menu{
         position: relative;
         right: 0;
-        width: auto;
+        width: 30rem;
         height: auto;
         padding: 0;
         transition: none;
@@ -282,13 +281,15 @@ body{
     }
 
     .space__main{
+        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
         place-items: center;
         gap: 0;
-
+        
         width: 100%;
         max-width: 63rem;
         margin-inline: auto;
         padding-inline: 2rem;
+        margin-block-start: 3rem;
     }
 }
 
