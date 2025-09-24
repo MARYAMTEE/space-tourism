@@ -82,7 +82,8 @@ body{
     padding: 2rem;
     background-color: var(--mobile-nav);
     backdrop-filter: blur(1.25rem);
-    -webkit-backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(1.25rem);
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     z-index: 10;
@@ -232,7 +233,8 @@ body{
 
 .space__main {
     display: grid;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 5rem;
 }
 
 
@@ -244,6 +246,7 @@ body{
         background-size: cover;
         text-align: start;
         padding: 0;
+        
     }
 
     .open__btn,
@@ -258,10 +261,7 @@ body{
         height: auto;
         padding: 0;
         transition: none;
-        background-color: var(--mobile-nav) !important;
-        backdrop-filter: blur(7rem);
-        margin-block-start: 2rem;
-        z-index: 1000;
+        transition: none;
     }
 
     .nav__list{
@@ -283,24 +283,28 @@ body{
         gap: 1rem;
     }
 
-    .space__main{
-        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-        place-items: center;
-        gap: 0;
-        
-        width: 100%;
-        max-width: 63rem;
-        margin-inline: auto;
-        padding-inline: 2rem;
-        margin-block-start: 3rem;
+    .space__paragraph{
+        margin-inline: 0;
     }
 
-    .space__paragraph{
-        max-width: 100%;
+     .space__main{
+        grid-template-columns: 1fr auto;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 70rem;
+        margin-inline: auto;
+        margin-block: 4rem;
+        padding-inline: 3rem;
     }
+
+    .space__large-btn{
+        display: flex;
+        justify-content: flex-end;
+    } 
+
 
     .logo__img{
-        margin-inline-start: 2rem;
+        margin-inline: 2rem 0;
     }
 }
 
@@ -310,17 +314,13 @@ body{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        
     }
 
     .nav__menu{
         width: 50rem;
     }
 
-    .space__header{
-        gap: 0;
-        justify-content: center;
-        margin-inline-start: 2.5rem;
-    }
 
     .space__line {
         content: "";
@@ -332,11 +332,7 @@ body{
         z-index: -1;
     }
 
-    .space__main{
-        padding-inline: 0;
-    }
-
     .logo__img{
-        margin-inline-end: 3rem;
+        margin-inline: 3rem;
     }
 }
