@@ -1,5 +1,5 @@
 const navBar = document.querySelector(".nav__menu");
-const navList = document.querySelectorAll(".nav__item");
+const navList = document.querySelectorAll(".nav__link");
 const openMenu = document.querySelector(".open__btn");
 const closeMenu = document.querySelector(".close__btn");
 const overlay = document.querySelector(".overlay");
