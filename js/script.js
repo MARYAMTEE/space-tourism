@@ -2,11 +2,9 @@ const navBar = document.querySelector(".nav__menu");
 const navList = document.querySelectorAll(".nav__link");
 const openMenu = document.querySelector(".open__btn");
 const closeMenu = document.querySelector(".close__btn");
-const overlay = document.querySelector(".overlay");
 
 openMenu.addEventListener("click", () => {
     navBar.classList.toggle("active");
-    overlay.classList.add("active");
 });
 
 navList.forEach(list => {
@@ -20,11 +18,6 @@ navList.forEach(list => {
 });
 
 closeMenu.addEventListener("click", () => {
-    navBar.classList.remove("active");
-    overlay.classList.remove("active");
-});
-
-overlay.addEventListener("click", () => {
     navBar.classList.remove("active");
 });
 

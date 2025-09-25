@@ -77,7 +77,16 @@
     }
 
     .crew__img{
-        width: 100%;
+        width: auto;
+    }
+
+    .crew__image{
+        order: 2;
+    }
+
+    .crew__tab--container{
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .crew__image::after{
@@ -90,5 +99,15 @@
 
     .title{
         margin-inline-start: 3rem;
+    }
+
+    .tab__description{
+        margin-inline: 0;
+    }
+}
+
+@media (min-width: 56.05rem){
+    .crew{
+        gap: 5rem;
     }
 }
