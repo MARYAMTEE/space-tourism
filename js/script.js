@@ -170,5 +170,11 @@ crewBtn.forEach((b, index) => {
       crewHeading.textContent = getCrew.heading;
       crewDescription.textContent = getCrew.description;
     }
+
+    [crewImg, crewSubheading, crewHeading, crewDescription].forEach(el => {
+      el.classList.remove("fade-in");
+      void el.offsetWidth;
+      el.classList.add("fade-in");
+    })
   })
 });
