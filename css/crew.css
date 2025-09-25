@@ -28,7 +28,6 @@
 .crew__img{
     width: 17rem;
     margin-inline: auto;
-    
 }
 
 .crew__image::after{
@@ -68,4 +67,28 @@
 
 .main__crew{
     margin-block: 2rem;
+}
+
+@media (min-width: 43.55rem){
+    .crew {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .crew__img{
+        width: 100%;
+    }
+
+    .crew__image::after{
+        display: none;
+    }
+
+    .crew__tabs{
+        justify-content: flex-start;
+    }
+
+    .title{
+        margin-inline-start: 3rem;
+    }
 }
