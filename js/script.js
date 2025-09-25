@@ -149,7 +149,7 @@ const crew =[
   }
 ];
 
-const crewBtn = document.querySelectorAll(".crew__tab [role='tab']");
+const crewBtn = document.querySelectorAll(".crew [role='tab']");
 const crewImg = document.querySelector(".crew__img");
 const crewSubheading = document.querySelector(".tab__subheading");
 const crewHeading = document.querySelector(".tab__heading");
