@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crew</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JavaScript -->
+    <script src="./js/script.js" defer></script>
+    <!-- Fontawesome Link-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="space__header">
+        <div class="space__logo flex">
+            <img src="./assets/shared/logo.svg" class="logo__img" alt="Page logo">
+            <button type="button" class="hamburger open__btn" aria-label="Hamburger">
+                <img src="./assets/shared/icon-hamburger.svg" aria-hidden="true" alt="">
+            </button>
+        </div>
+        
+        <span class="space__line"></span>
+        
+        <nav class="nav__menu">
+            <button type="button" class="hamburger close__btn flex" aria-label="Hamburger">
+                <img src="./assets/shared/icon-close.svg" aria-hidden="true" alt="">
+            </button>
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">
+                    <span aria-hidden="true">00</span>
+                    Home
+                </a></li>
+                <li class="nav__item"><a href="destination.html" class="nav__link">
+                    <span aria-hidden="true">01</span>
+                    Destination
+                </a></li>
+                <li class="nav__item"><a href="crew.html" class="nav__link active">
+                    <span aria-hidden="true">02</span>
+                    Crew
+                </a></li>
+                <li class="nav__item"><a href="#" class="nav__link">
+                    <span aria-hidden="true">03</span>
+                    Technonlogy
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="overlay"></div>
+    <main>
+        <h1 class="crew__title">
+            <span>02</span>
+            Meet your crew
+        </h1>
+
+        <div class="crew__tab">
+            <div class="crew__image">
+                <img src="./assets/crew/image-douglas-hurley.png" class="crew__img" alt="">
+            </div>
+
+            <div class="crew__tab--container">
+                <div class="crew__tabs" role="tablist" aria-label="crew button list">
+                    <button type="button" aria-selected="true" role="tab" class="crew__tab" data-image="commander-image"><span class="sr-only">The commander</span></button>
+                    <button type="button" aria-selected="false" role="tab" class="crew__tab" data-image="mission-image"><span class="sr-only">The mission specialist</span></button>
+                    <button type="button" aria-selected="false" role="tab" class="crew__tab" data-image="pilot-image"><span class="sr-only">The pilot</span></button>
+                    <button type="button" aria-selected="false" role="tab" class="crew__tab" data-image="engineer-image"><span class="sr-only">The Crew Engineer</span></button>
+                </div>
+
+                <div class="crew__tab--texts">
+                    <h2 class="tab__subheading">Commander</h2>
+                    <h3 class="tab__heading">Douglas Hurley</h3>
+                    <p class="tab__description">
+                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former 
+                        NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

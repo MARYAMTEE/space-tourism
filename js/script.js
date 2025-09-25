@@ -47,7 +47,7 @@ const destinations = [
         images: {
             png: "./assets/destination/image-mars.png",
         },
-        description: `Don't forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
+        description: `Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, 
   the tallest planetary mountain in our solar system. It's two and a half times 
   the size of Everest!`,
         distance: "225 mil. km",
@@ -59,7 +59,7 @@ const destinations = [
       png: "./assets/destination/image-europa.png",
     },
     description: `The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
-      winter lover’s dream. With an icy surface, it’s perfect for a bit of 
+      winter lover's dream. With an icy surface, it's perfect for a bit of 
       ice skating, curling, hockey, or simple relaxation in your snug 
       wintery cabin.`,
     distance: "628 mil. km",
@@ -72,13 +72,13 @@ const destinations = [
     },
     description: `The only moon known to have a dense atmosphere other than Earth, Titan 
       is a home away from home (just a few hundred degrees colder!). As a 
-      bonus, you get striking views of Saturn’s rings.`,
+      bonus, you get striking views of Saturn's rings.`,
     distance: "1.6 bil. km",
     travel: "7 years"
   }
 ];
 
-const tabBtn = document.querySelectorAll("[role='tab'");
+const tabBtn = document.querySelectorAll("[role='tab']");
 const destinationImages = document.querySelector(".destination__img");
 const destinationTitle = document.querySelector(".tab__header");
 const destinationDescription = document.querySelector(".tab__para");
@@ -93,11 +93,82 @@ tabBtn.forEach((btn, index) => {
         const getData = destinations[index];
 
         // update DOM
-        destinationImages.src = getData.images.png;
-        destinationImages.alt = getData.name;
-        destinationTitle.textContent = getData.name
-        destinationDescription.textContent = getData.description;
-        distanceText.textContent = getData.distance;
-        travelText.textContent = getData.travel;
+        if (destinationImages) {
+          destinationImages.src = getData.images.png;
+          destinationImages.alt = getData.name;
+          destinationTitle.textContent = getData.name
+          destinationDescription.textContent = getData.description;
+          distanceText.textContent = getData.distance;
+          travelText.textContent = getData.travel;
+        }
     });
+});
+
+// Crew page
+const crew =[
+  {
+    subheading: "Commander",
+    heading: "Douglas Hurley",
+    image: {
+      png: "./assets/crew/image-douglas-hurley.png",
+  },
+    description: `Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+    and former NASA astronaut. He launched into space for the third time as 
+    commander of Crew Dragon Demo-2.`
+  },
+  {
+    subheading: "Mission Specialist",
+    heading: "Mark Shuttleworth",
+    image: {
+      png: "./assets/crew/image-mark-shuttleworth.png",
+    },
+    description: `Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
+    the Linux-based Ubuntu operating system. Shuttleworth became the first South 
+    African to travel to space as a space tourist.`
+  },
+  {
+    subheading: "Pilot",
+    heading: "Victor Glover",
+    image: {
+      png: "./assets/crew/image-victor-glover.png",
+    },
+    description: `Pilot on the first operational flight of the SpaceX Crew Dragon to the 
+  International Space Station. Glover is a commander in the U.S. Navy where 
+  he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
+  station systems flight engineer.`
+  },
+  {
+    subheading: "Flight Engineer",
+    heading: "Anousheh Ansari",
+    image: {
+      png: "./assets/crew/image-anousheh-ansari.png",
+    },
+    description: `Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+  Ansari was the fourth self-funded space tourist, the first self-funded woman to 
+  fly to the ISS, and the first Iranian in space.`
+  }
+];
+
+const crewBtn = document.querySelectorAll(".crew__tab [role='tab']");
+const crewImg = document.querySelector(".crew__img");
+const crewSubheading = document.querySelector(".tab__subheading");
+const crewHeading = document.querySelector(".tab__heading");
+const crewDescription = document.querySelector(".tab__description");
+
+crewBtn.forEach((b, index) => {
+  b.addEventListener("click", () => {
+    crewBtn.forEach(btn => btn.setAttribute("aria-selected", "false"));
+    b.setAttribute("aria-selected", "true");
+
+    const getCrew = crew[index];
+
+    // update DOM
+    if (crewImg) {
+      crewImg.src = getCrew.image.png;
+      crewImg.alt = getCrew.subheading;
+      crewSubheading.textContent = getCrew.subheading;
+      crewHeading.textContent = getCrew.heading;
+      crewDescription.textContent = getCrew.description;
+    }
+  })
 });

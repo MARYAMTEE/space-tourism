@@ -1,0 +1,7 @@
+body{
+    background: url(../assets/destination/background-destination-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+}
