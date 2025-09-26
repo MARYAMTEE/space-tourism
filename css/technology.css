@@ -21,17 +21,20 @@ body{
     margin-block: 4rem;
 }
 
-.tech__tab-2 {
-    margin-block: 2rem;
+.tech__texts {
+    margin-block: 4rem;
 }
 
 .tech__subheading{
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-family: var(--condensed);
+    font-size: clamp(0.875rem, 2vw, 2rem);
+    font-weight: 400;
     color: var(--light);
+    letter-spacing: 2px;
 }
 
 .tech__heading{
-    margin-block-start: 0.5rem;
+    margin-block-start: 0.7rem;
 }
 
 .tech__description{

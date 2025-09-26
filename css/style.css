@@ -244,7 +244,7 @@ body{
 /* Number Heading on pages */
 .title {
     font-family: var(--condensed);
-    font-size: clamp(1rem, 2vw, 1.75rem);
+    font-size: clamp(1.2rem, 2vw, 1.75rem);
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 4.72px;
@@ -283,8 +283,8 @@ body{
     font-family: var(--belle);
 }
 
-.tab__subheading,
-.tech__subheading {
+.tab__subheading {
+    font-family: var(--condensed);
     font-size: clamp(1.3rem, 2vw, 2rem);
     color: var(--white-10);
     font-weight: 700;
