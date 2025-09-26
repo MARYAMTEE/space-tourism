@@ -44,3 +44,69 @@ body{
 .tech__main{
     margin-block: 2rem;
 }
+
+@media (min-width: 43.55rem){
+    body{
+        background: url(../assets/technology/background-technology-tablet.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .tech__description{
+        margin-inline: 0;
+    }
+
+    .tech__container-content{
+        display: flex;
+        gap: 1rem;
+        justify-content: start;
+        order: 1;
+    }
+
+    .tech__image{
+        order: 2;
+    }
+
+    .tech__img{
+        width: 13rem;
+        margin-block: 0;
+    }
+
+    .tech__tabs{
+        flex-direction: column;
+    }
+
+    .tech__container{
+        display: grid;
+        align-items: center;
+        gap: 4rem;
+        padding-inline: 0;
+        margin-inline: 0;
+    }
+
+    .tech__texts{
+        margin-block: 0;
+    }
+
+    .tech__main{
+        margin-inline-start: 4rem;
+    }
+}
+
+@media (min-width: 56.05rem){
+    body{
+        background: url(../assets/technology/background-technology-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .tech__img{
+        width: 25rem;
+    }
+
+    .tech__container-content{
+        gap: 4rem;
+    }
+}

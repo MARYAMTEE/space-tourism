@@ -370,8 +370,9 @@ body{
         margin-inline: 0;
     }
 
-     .space__main,
-     .crew{
+    .space__main,
+    .crew,
+    .tech__container {
         grid-template-columns: 1fr auto;
         align-items: flex-end;
         width: 100%;
