@@ -192,7 +192,7 @@ const technology = [
     description: `A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
   by analogy to the seaport for ships or airport for aircraft. Based in the 
   famous Cape Canaveral, our spaceport is ideally situated to take advantage 
-  of the Earth’s rotation for launch.`
+  of the Earth's rotation for launch.`
   },
   {
     heading: "Space capsule",
@@ -213,7 +213,7 @@ const techDescription = document.querySelector(".tech__description");
 
 techBtn.forEach((t, index) => {
   t.addEventListener("click", () => {
-    techBtn.forEach(btn => btn.setAttribute("aria-selected", "false"));
+    techBtn.forEach(tn => tn.setAttribute("aria-selected", "false"));
     t.setAttribute("aria-selected", "true");
 
     const getTech = technology[index];

@@ -4,3 +4,40 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+.tech__tab{
+    display: inline-grid;
+    place-items: center;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: 0 1rem;
+    color: var(--white);
+}
+
+.tech__img{
+    margin-block: 4rem;
+}
+
+.tech__tab-2 {
+    margin-block: 2rem;
+}
+
+.tech__subheading{
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: var(--light);
+}
+
+.tech__heading{
+    margin-block-start: 0.5rem;
+}
+
+.tech__description{
+    margin-block-start: 2rem;
+}
+
+.tech__main{
+    margin-block: 2rem;
+}

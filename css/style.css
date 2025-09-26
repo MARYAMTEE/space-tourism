@@ -188,7 +188,8 @@ body{
 }
 
 .space__paragraph,
-.tab__description{
+.tab__description,
+.tech__description{
     font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.9;
     max-width: 28rem;
@@ -242,7 +243,8 @@ body{
 
 /* Number Heading on pages */
 .title {
-    font-size: clamp(1.2rem, 2vw, 1.75rem);
+    font-family: var(--condensed);
+    font-size: clamp(1rem, 2vw, 1.75rem);
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 4.72px;
@@ -254,14 +256,47 @@ body{
 }
 
 /* control buttons */
-[aria-selected="false"] {
-  border-bottom: 2px solid white;
-  background-color: var(--white-10);
+.crew__tabs,
+.tech__tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
-[aria-selected="true"] {
-  border-bottom: none;
-  color: var(--white);
+.crew__tab[aria-selected="false"]{
+    background-color: var(--white-10);
+}
+
+.crew__tab[aria-selected="true"],
+.tech__tab[aria-selected="true"] {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+/* texts */
+.tab__subheading,
+.tab__heading,
+.tech__subheading,
+.tech__heading {
+    text-transform: uppercase;
+    font-family: var(--belle);
+}
+
+.tab__subheading,
+.tech__subheading {
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    color: var(--white-10);
+    font-weight: 700;
+}
+
+.tab__heading,
+.tech__heading{
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    color: var(--white);
+    font-weight: 500;
+    margin-block-start: 0.5rem;
+    margin-block-end: 1rem;
 }
 
 /* slide animation */
