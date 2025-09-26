@@ -70,6 +70,13 @@
 }
 
 @media (min-width: 43.55rem){
+    body{
+        background: url(../assets/crew/background-crew-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .crew {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -108,6 +115,13 @@
 }
 
 @media (min-width: 56.05rem){
+    body{
+        background: url(../assets/crew/background-crew-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
     .crew{
         gap: 5rem;
     }
