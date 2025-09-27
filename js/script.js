@@ -94,6 +94,12 @@ tabBtn.forEach((btn, index) => {
           distanceText.textContent = getData.distance;
           travelText.textContent = getData.travel;
         }
+
+      [destinationImages, destinationTitle, destinationDescription, distanceText, travelText].forEach(travel => {
+      travel.classList.remove("fade-in");
+      void travel.offsetWidth;
+      travel.classList.add("fade-in");
+    })
     });
 });
 
@@ -236,6 +242,6 @@ techBtn.forEach((t, index) => {
       le.classList.remove("fade-in");
       void le.offsetWidth;
       le.classList.add("fade-in");
-    })
-  })
+    });
+  });
 });
