@@ -13,10 +13,9 @@ body{
     margin-block: 2rem;
 }
 
-.destination__tab{
+.destination__btn{
     border: none;
     outline: none;
-    background-color: none;
     background-color: transparent;
     color: var(--white);
     text-transform: uppercase;
@@ -24,7 +23,7 @@ body{
     position: relative;
 }
 
-.destination__tab::after{
+.destination__btn::after{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -34,7 +33,7 @@ body{
     background-color: var(--white);
 }
 
-.destination__tab[aria-selected="true"]::after{
+.destination__btn[aria-selected="true"]::after{
     width: 100%;
 }
 
@@ -43,6 +42,7 @@ body{
    font-family: var(--belle);
    font-weight: 400;
    padding-top: 2.5rem;
+   text-transform: uppercase;
 }
 
 .tab__para{
@@ -81,4 +81,61 @@ body{
     letter-spacing: 2.7px;
     text-transform: uppercase;
     padding-block-end: 0.75rem;
+}
+
+@media (min-width: 43.55rem) {
+    body{
+        background: url(../assets/destination/background-destination-tablet.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .destination__tab{
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .destination__img{
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .destination__meta{
+        flex-direction: row;
+    }
+
+    .title{
+        margin-inline-start: 3rem;
+    }
+
+    .tabs{
+        justify-content: flex-start;
+    }
+
+    .tab__para{
+        margin-inline: 0;
+    }
+}
+
+@media (min-width: 56.05rem){
+    body{
+        background: url(../assets/destination/background-destination-desktop.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .destination__img{
+        width: 26rem;
+        height: 26rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .destination__tab{
+        gap: 4rem;
+    }
 }

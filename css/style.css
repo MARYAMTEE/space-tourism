@@ -384,7 +384,8 @@ body{
 
     .space__main,
     .crew,
-    .tech__container {
+    .tech__container,
+    .destination__tab {
         grid-template-columns: 1fr auto;
         align-items: flex-end;
         width: 100%;

@@ -82,7 +82,7 @@ body{
     .tech__container{
         display: grid;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
         padding-inline: 0;
         margin-inline: 0;
     }
