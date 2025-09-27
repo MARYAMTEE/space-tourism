@@ -38,10 +38,6 @@
     padding-block: 2.5rem;
 }
 
-.main__crew{
-    margin-block: 2rem;
-}
-
 @media (min-width: 43.55rem){
     body{
         background: url(../assets/crew/background-crew-tablet.jpg);

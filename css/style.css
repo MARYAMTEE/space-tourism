@@ -157,6 +157,9 @@ body{
 }
 
 /* visible header */
+.logo__img{
+    width: 2.5rem;
+}
 .space__logo{
     justify-content: space-between;
     align-items: center;
@@ -189,7 +192,8 @@ body{
 
 .space__paragraph,
 .tab__description,
-.tech__description{
+.tech__description,
+.tab__para{
     font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.9;
     max-width: 28rem;
@@ -244,10 +248,11 @@ body{
 /* Number Heading on pages */
 .title {
     font-family: var(--condensed);
-    font-size: clamp(1.2rem, 2vw, 1.75rem);
+    font-size: clamp(1rem, 2vw, 1.75rem);
     text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 4.72px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    color: var(--light);
 }
 
 .title span{
@@ -257,7 +262,8 @@ body{
 
 /* control buttons */
 .crew__tabs,
-.tech__tabs{
+.tech__tabs,
+.tabs{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,6 +317,12 @@ body{
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* main mobile margin */
+.tech__main,
+.main__crew,
+.destination__main{
+    margin-block: 2rem;
 }
 
 

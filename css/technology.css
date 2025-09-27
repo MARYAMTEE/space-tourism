@@ -42,10 +42,6 @@ body{
     margin-block-start: 2rem;
 }
 
-.tech__main{
-    margin-block: 2rem;
-}
-
 @media (min-width: 43.55rem){
     body{
         background: url(../assets/technology/background-technology-tablet.jpg);
