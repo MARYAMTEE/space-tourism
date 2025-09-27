@@ -10,11 +10,12 @@ body{
     place-items: center;
     outline: none;
     background-color: transparent;
-    border: 1px solid var(--white);
+    border: 1px solid var(--white-10);
     border-radius: 50%;
     aspect-ratio: 1;
     padding: 0 1rem;
     color: var(--white);
+    font-family: var(--belle);
 }
 
 .tech__img{
@@ -59,7 +60,7 @@ body{
 
     .tech__container-content{
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
         justify-content: start;
         order: 1;
     }
@@ -77,10 +78,15 @@ body{
         flex-direction: column;
     }
 
+    .tech__tab{
+        padding: 0 2rem;
+        font-size: 2rem;
+    }
+
     .tech__container{
         display: grid;
         align-items: center;
-        gap: 4rem;
+        gap: 3rem;
         padding-inline: 0;
         margin-inline: 0;
     }
@@ -107,6 +113,10 @@ body{
     }
 
     .tech__container-content{
+        gap: 4rem ;
+    }
+
+    .tech__container{
         gap: 4rem;
     }
 }

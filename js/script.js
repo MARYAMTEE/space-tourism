@@ -177,7 +177,8 @@ const technology = [
   {
     heading: "Launch vehicle",
     image: {
-      png: "./assets/technology/image-launch-vehicle-landscape.jpg",
+      mobile: "./assets/technology/image-launch-vehicle-landscape.jpg",
+      desktop: "./assets/technology/image-launch-vehicle-portrait.jpg",
     },
     description: `A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
   payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
@@ -187,7 +188,8 @@ const technology = [
   {
     heading: "Spaceport",
     image: {
-      png: "./assets/technology/image-spaceport-landscape.jpg",
+      mobile: "./assets/technology/image-spaceport-landscape.jpg",
+      desktop: "./assets/technology/image-spaceport-portrait.jpg",
     },
     description: `A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
   by analogy to the seaport for ships or airport for aircraft. Based in the 
@@ -197,7 +199,8 @@ const technology = [
   {
     heading: "Space capsule",
     image: {
-      png: "./assets/technology/image-space-capsule-landscape.jpg",
+      mobile: "./assets/technology/image-space-capsule-landscape.jpg",
+      desktop: "./assets/technology/image-space-capsule-portrait.jpg",
     },
     description: `A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
   capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
@@ -207,7 +210,9 @@ const technology = [
 ];
 
 const techBtn = document.querySelectorAll(".tech__tabs [role='tab']");
-const techImg = document.querySelector(".tech__img");
+const techImg = document.querySelector(".tech__choices");
+const source = techImg.querySelector("source");
+const img = techImg.querySelector("img");
 const techHeading = document.querySelector(".tech__heading");
 const techDescription = document.querySelector(".tech__description");
 
@@ -220,8 +225,9 @@ techBtn.forEach((t, index) => {
 
     // update DOM
     if (techImg) {
-      techImg.src = getTech.image.png;
-      techImg.alt = getTech.heading;
+      source.srcset = getTech.image.desktop
+      img.src = getTech.image.mobile;
+      img.alt = getTech.heading;
       techHeading.textContent = getTech.heading;
       techDescription.textContent = getTech.description;
     }
