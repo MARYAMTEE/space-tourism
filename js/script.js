@@ -78,22 +78,25 @@ const destinationDescription = document.querySelector(".tab__para");
 const distanceText = document.querySelector(".distance__text");
 const travelText = document.querySelector(".destination__text");
 
+function updateDestination(getData) {
+  destinationImages.src = getData.images.png;
+  destinationImages.alt = getData.name;
+  destinationTitle.textContent = getData.name
+  destinationDescription.textContent = getData.description;
+  distanceText.textContent = getData.distance;
+  travelText.textContent = getData.travel;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateDestination(destinations[0]);
+});
+
 tabBtn.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         tabBtn.forEach(button => button.setAttribute("aria-selected", "false"));
         btn.setAttribute("aria-selected", "true");
 
-        const getData = destinations[index];
-
-        // update DOM
-        if (destinationImages) {
-          destinationImages.src = getData.images.png;
-          destinationImages.alt = getData.name;
-          destinationTitle.textContent = getData.name
-          destinationDescription.textContent = getData.description;
-          distanceText.textContent = getData.distance;
-          travelText.textContent = getData.travel;
-        }
+      updateDestination(destinations[index]);
 
       [destinationImages, destinationTitle, destinationDescription, distanceText, travelText].forEach(travel => {
       travel.classList.remove("fade-in");
@@ -154,21 +157,24 @@ const crewSubheading = document.querySelector(".tab__subheading");
 const crewHeading = document.querySelector(".tab__heading");
 const crewDescription = document.querySelector(".tab__description");
 
+function updateCrew(getCrew){
+  crewImg.src = getCrew.image.png;
+  crewImg.alt = getCrew.subheading;
+  crewSubheading.textContent = getCrew.subheading;
+  crewHeading.textContent = getCrew.heading;
+  crewDescription.textContent = getCrew.description;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateCrew(crew[0]);
+})
+
 crewBtn.forEach((b, index) => {
   b.addEventListener("click", () => {
     crewBtn.forEach(btn => btn.setAttribute("aria-selected", "false"));
     b.setAttribute("aria-selected", "true");
 
-    const getCrew = crew[index];
-
-    // update DOM
-    if (crewImg) {
-      crewImg.src = getCrew.image.png;
-      crewImg.alt = getCrew.subheading;
-      crewSubheading.textContent = getCrew.subheading;
-      crewHeading.textContent = getCrew.heading;
-      crewDescription.textContent = getCrew.description;
-    }
+    updateCrew(crew[index]);
 
     [crewImg, crewSubheading, crewHeading, crewDescription].forEach(el => {
       el.classList.remove("fade-in");
@@ -222,21 +228,24 @@ const img = techImg.querySelector("img");
 const techHeading = document.querySelector(".tech__heading");
 const techDescription = document.querySelector(".tech__description");
 
+function updateTechnology(getTech){
+  source.srcset = getTech.image.desktop
+  img.src = getTech.image.mobile;
+  img.alt = getTech.heading;
+  techHeading.textContent = getTech.heading;
+  techDescription.textContent = getTech.description;
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateTechnology(technology[0]);
+});
+
 techBtn.forEach((t, index) => {
   t.addEventListener("click", () => {
     techBtn.forEach(tn => tn.setAttribute("aria-selected", "false"));
     t.setAttribute("aria-selected", "true");
 
-    const getTech = technology[index];
-
-    // update DOM
-    if (techImg) {
-      source.srcset = getTech.image.desktop
-      img.src = getTech.image.mobile;
-      img.alt = getTech.heading;
-      techHeading.textContent = getTech.heading;
-      techDescription.textContent = getTech.description;
-    }
+    updateTechnology(technology[index]);
 
     [techImg, techHeading, techDescription].forEach(le => {
       le.classList.remove("fade-in");
