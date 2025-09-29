@@ -59,7 +59,7 @@ button {
 
 body{
     position: relative;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     font-family: var(--barlow);
     font-weight: 400;
     color: var(--light);
@@ -173,6 +173,7 @@ body{
 .space__texts{
     margin-block-start: 2rem;
 }
+
 .space__heading {
     display: block;
     font-size: clamp(1rem, 2vw, 1.75rem);
@@ -195,7 +196,7 @@ body{
 .tech__description,
 .tab__para{
     font-size: clamp(1rem, 2vw, 1.125rem);
-    line-height: 1.9;
+    line-height: 1.7;
     max-width: 28rem;
     margin-inline: auto;
 }
@@ -293,7 +294,7 @@ body{
     font-family: var(--condensed);
     font-size: clamp(1.3rem, 2vw, 2rem);
     color: var(--white-10);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .tab__heading,
@@ -325,9 +326,35 @@ body{
     margin-block: 2rem;
 }
 
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
 
-/* Destination page */
+/* Keyframes */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
+@keyframes slideRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Break points for 700px */
 @media (min-width: 43.55rem){
     body {
         background: url(../assets/home/background-home-tablet.jpg);
@@ -419,6 +446,7 @@ body{
 }
 }
 
+/* Break points for 900px */
 @media (min-width: 56.05rem){
     body {
         background: url(../assets/home/background-home-desktop.jpg);
