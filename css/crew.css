@@ -39,6 +39,8 @@
     padding-block: 2.5rem;
 }
 
+
+
 @media (min-width: 43.55rem){
     body{
         background: url(../assets/crew/background-crew-tablet.jpg);
@@ -48,20 +50,11 @@
     }
 
     .crew {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        place-items: center;
         gap: 2rem;
     }
 
     .crew__img{
-        width: auto;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .crew__image{
-        order: 2;
+        width: 25rem;
     }
 
     .crew__tab--container{
@@ -72,21 +65,9 @@
     .crew__image::after{
         display: none;
     }
-
-    .crew__tabs{
-        justify-content: flex-start;
-    }
-
-    .title{
-        margin-inline-start: 3rem;
-    }
-
-    .tab__description{
-        margin-inline: 0;
-    }
 }
 
-@media (min-width: 56.05rem){
+@media (min-width: 63.8rem){
     body{
         background: url(../assets/crew/background-crew-desktop.jpg);
         background-repeat: no-repeat;
@@ -96,5 +77,30 @@
     
     .crew{
         gap: 5rem;
+    }
+
+    .crew__tab--container{
+        order: 1;
+    }
+
+    .crew__image{
+        order: 2;
+    }
+
+    .tab__description{
+        margin-inline: 0;
+    }
+
+    .crew__tabs{
+        justify-content: flex-start;
+    }
+
+    .tab__description {
+        width: 100%;
+        max-width: 25rem;
+    }
+
+    .title{
+        margin-inline-start: 3rem;
     }
 }

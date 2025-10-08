@@ -96,7 +96,7 @@ body{
     }
 }
 
-@media (min-width: 56.05rem){
+@media (min-width: 63.8rem){
     body{
         background: url(../assets/technology/background-technology-desktop.jpg);
         background-size: cover;

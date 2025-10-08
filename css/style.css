@@ -185,7 +185,7 @@ body{
 }
 
 .space__span{
-    font-size: clamp(5rem, 8vw + 1rem, 9.375rem); 
+    font-size: clamp(6rem, 8vw + 1rem, 9.375rem); 
     font-family: var(--belle);
     letter-spacing: 2.7px;
     color: var(--white);
@@ -195,9 +195,9 @@ body{
 .tab__description,
 .tech__description,
 .tab__para{
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-size: clamp(1.2rem, 2vw, 1.125rem);
     line-height: 1.7;
-    max-width: 28rem;
+    max-width: 35rem;
     margin-inline: auto;
 }
 
@@ -240,7 +240,9 @@ body{
     transform: scale(1.5);
 }
 
-.space__main {
+.space__main,
+.destination__tab,
+.crew {
     display: grid;
     grid-template-columns: 1fr;
     gap: 5rem;
@@ -361,9 +363,6 @@ body{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        text-align: start;
-        padding: 0;
-        
     }
 
     .open__btn,
@@ -404,28 +403,11 @@ body{
         margin-block-start: 2rem;
     }
 
-    .space__paragraph{
-        margin-inline: 0;
-    }
-
-    .space__main,
     .crew,
-    .tech__container,
-    .destination__tab {
-        grid-template-columns: 1fr auto;
-        align-items: flex-end;
-        width: 100%;
-        max-width: 70rem;
-        margin-inline: auto;
-        margin-block: 4rem;
-        padding-inline: 3rem;
+    .space__main,
+    .destination__main{
+        padding-block: 5rem;
     }
-
-    .space__large-btn{
-        display: flex;
-        justify-content: flex-end;
-    } 
-
 
     .logo__img{
         margin-inline: 2rem 0;
@@ -445,20 +427,32 @@ body{
 }
 }
 
-/* Break points for 900px */
-@media (min-width: 56.05rem){
+/* Break points for 1024px */
+@media (min-width: 63.8rem){
     body {
         background: url(../assets/home/background-home-desktop.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        
+        text-align: start;
     }
 
     .nav__menu{
         width: 50rem;
     }
 
+    .crew,
+    .space__main,
+    .tech__container,
+    .destination__tab {
+        grid-template-columns: 1fr auto;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 70rem;
+        margin-inline: auto;
+        margin-block: 4rem;
+        padding: 0 3rem;
+    }
 
     .space__line {
         content: "";
@@ -468,6 +462,15 @@ body{
         height: 1px;
         background-color: var(--white);
         z-index: -1;
+    }
+
+    .space__large-btn{
+        display: flex;
+        justify-content: flex-end;
+    } 
+
+    .space__paragraph{
+        margin-inline: 0;
     }
 
     .logo__img{
