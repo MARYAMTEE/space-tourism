@@ -131,6 +131,7 @@ body{
 
     .tab__para{
         margin-inline: 0;
+        max-width: 25rem;
     }
 
     .title{

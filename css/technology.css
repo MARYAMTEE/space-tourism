@@ -20,6 +20,7 @@ body{
 
 .tech__img{
     margin-block: 4rem;
+    margin-inline: auto;
 }
 
 .tech__texts {
@@ -40,6 +41,7 @@ body{
 
 .tech__description{
     margin-block-start: 2rem;
+    max-width: 50rem;
 }
 
 @media (min-width: 43.55rem){
@@ -48,30 +50,6 @@ body{
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
-
-    .tech__description{
-        margin-inline: 0;
-    }
-
-    .tech__container-content{
-        display: flex;
-        gap: 2rem;
-        justify-content: start;
-        order: 1;
-    }
-
-    .tech__image{
-        order: 2;
-    }
-
-    .tech__img{
-        width: 13rem;
-        margin-block: 0;
-    }
-
-    .tech__tabs{
-        flex-direction: column;
     }
 
     .tech__tab{
@@ -83,12 +61,6 @@ body{
         display: grid;
         align-items: center;
         gap: 2rem;
-        padding-inline: 0;
-        margin-inline: 0;
-    }
-
-    .tech__texts{
-        margin-block: 0;
     }
 
     .tech__main{
@@ -106,13 +78,35 @@ body{
 
     .tech__img{
         width: 25rem;
-    }
-
-    .tech__container-content{
-        gap: 4rem ;
+        margin-block: 0;
     }
 
     .tech__container{
         gap: 4rem;
+        padding-inline: 0;
+    }
+
+    .tech__container-content{
+        display: flex;
+        gap: 4rem;
+        justify-content: start;
+        order: 1;
+    }
+
+    .tech__image{
+        order: 2;
+    }
+
+    .tech__tabs{
+        flex-direction: column;
+    }
+
+    .tech__description{
+        margin-inline: 0;
+        max-width: 25rem;
+    }
+
+    .tech__texts{
+        margin-block: 0;
     }
 }

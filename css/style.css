@@ -197,6 +197,7 @@ body{
 .tab__para{
     font-size: clamp(1.2rem, 2vw, 1.125rem);
     line-height: 1.7;
+    width: 100%;
     max-width: 35rem;
     margin-inline: auto;
 }
